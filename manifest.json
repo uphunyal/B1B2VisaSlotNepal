@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "B1/B2 US Visa Slots Nepal",
+  "description": "Check for B1/B2 US Visa Interview slots in Nepal",
+  "version": "1.1",
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAphFXQ4jjpNqopzV+O6H0s8T1OMACSVi90QcwTTt+WZpyxvxEH9AyQDVVXHwNWe21xJnrrmqmcmG7DL/yhG32R2PyqoAGFWQKawPF90Ymsqd9VsKaarT090TrZ4XIigZAg6kb+/IqkKudW+7pA7ghu2pHeR3Nt+YtvpludCH821pHR/AOysD869+pzT3o1b4f/hYp5IzC8/a3NGcQb+AHzJbC40XyCyUpFHv+Lun9kI/PlvHeX1rIkzzIeus8p43M2s376oF44R3nJsGCEq5u8BH/BMQQkUbVJPkQHQlvFMfDUxl47qkuk8nQ24En2bZVhmvH68UHtDU8qoIs4bkP1wIDAQAB",
+  "action": {
+    "default_popup": "hello.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "128": "icons/icon-128.png"
+ },
+  "content_scripts": [
+    {
+      "matches": ["https://portal.ustraveldocs.com/*"],
+      "runAt" : "document_end",
+      "js": ["scripts/html2canvas.js","scripts/content-script.js"]
+    }
+  ]
+}
